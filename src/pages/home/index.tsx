@@ -1,10 +1,11 @@
 import React from "react";
-import { AppHeader } from "../../components";
+import { AppFooter, AppHeader } from "../../components";
 
 export const Home = () => {
   return (
     <div>
       <AppHeader />
+      <AppFooter />
     </div>
   );
 };
