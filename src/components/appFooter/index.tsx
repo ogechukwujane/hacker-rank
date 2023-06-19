@@ -4,18 +4,18 @@ import { footerLinks } from "../../constants";
 
 export const AppFooter = () => {
   return (
-    <div>
-      <div className="flex flex-col sm:flex-row  flex-wrap justify-between gap-7">
+    <div  className="max-w-auto mx-auto px-10">
+      <div className="flex flex-col sm:flex-row  flex-wrap justify-between gap-3">
         {footerLinks.map(({ title, links }) => (
           <div key={title.name}>
             {/* <Link to={title.url}> */}
-            <h4 className="text-2xl sm:text-base font-medium tracking-[0.5em] my-6 text-gray-400">
+            <h4 className="text-base font-medium tracking-[0.5em] my-6 text-gray-400">
               {title.name}
             </h4>
             {/* </Link> */}
             <div className="flex flex-col gap-2.5">
               {links.map(({ name, url }) => (
-                <p key={name} className="text-gray-500 text-2xl sm:text-base font-medium">
+                <p key={name} className="text-gray-500 text-base font-normal">
                   {name}
                 </p>
               ))}

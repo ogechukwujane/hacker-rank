@@ -6,7 +6,24 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "light-green": {
+          100: "#f2faf4",
+          200: "#e7f6ec",
+        },
+        "light-purple": {
+          100: "#f5f5ff",
+          200: "#e2e2ff",
+        },
+      },
+      maxWidth: {
+        auto: "1440px",
+      },
+      screens: {
+        "lg-laptop": "1440px",
+      },
+    },
   },
   plugins: [],
 };

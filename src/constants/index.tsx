@@ -1,3 +1,12 @@
+import image1 from "../assets/peloton_black.png";
+import image2 from "../assets/atlassian_black.png";
+import image3 from "../assets/bloomberg_black.png";
+import image4 from "../assets/vmware_black.png";
+import image5 from "../assets/stripe_black.png";
+import image6 from "../assets/goldmansachs_black.png";
+import image7 from "../assets/adobe_black.png";
+import image8 from "../assets/linkedin_black.png";
+
 export const headerLinks = ["Products", "Solutions", "Resources", "Pricing"];
 export const footerLinks = [
   {
@@ -169,4 +178,15 @@ export const footerLinks = [
       },
     ],
   },
+];
+
+export const socialApps = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
 ];
