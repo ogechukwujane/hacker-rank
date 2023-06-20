@@ -6,7 +6,7 @@ import hacker_rank_logo from "../../assets/hackerrank_logo-Pride.gif";
 export const AppHeader = () => {
   return (
     <div className="bg-white">
-      <div className="flex justify-between items-center py-4 max-w-auto mx-auto px-10">
+      <div className="flex justify-between items-center py-4 max-w-auto mx-auto px-5 sm:px-10">
         {/* <div className="w-full py-5 flex justify-between items-center"> */}
         <div className="w-[130px] sm:w-[150px]">
           <img src={hacker_rank_logo} alt="hacker_rank_logo" width={"100%"} />

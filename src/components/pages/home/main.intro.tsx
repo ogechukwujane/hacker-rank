@@ -4,8 +4,8 @@ import { CustomButton } from "../../customButton";
 export const MainIntro = () => {
   return (
     <>
-      <div className="px-10 bg-red-200 ">
-        <div className="flex flex-col items-center gap-7 px-2 sm:px-10 pt-[5em] pb-10 bg-red-100 max-w-auto mx-auto">
+      <div className=" bg-red-200 ">
+        <div className="flex flex-col items-center gap-7 px-5 sm:px-10 pt-[5em] pb-10 bg-red-100 max-w-auto mx-auto">
           <h2 className="font-bold text-center text-4xl lg:text-7xl max-w-[100%] lg:max-w-[80%] xl:max-w-[60%]">
             Skills speak louder than words
           </h2>

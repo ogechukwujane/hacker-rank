@@ -23,6 +23,10 @@ module.exports = {
       screens: {
         "lg-laptop": "1440px",
       },
+      backgroundImage: {
+        "resume-img": 'url("/src/assets/resume.jpg")',
+        "report-img": 'url("/src/assets/report-2.jpg")',
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,44 @@
+.image_wrap{
+    position: relative;
+}
+.report_image{
+    position: relative;
+}
+.resume_image{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+   bottom: 0px;
+
+}
+
+.Block{
+    display: flex;
+    align-items: center;
+    /* background: yellow; */
+    position: relative;
+    /* margin: 50px 0px; */
+    position: absolute;
+    /* height: 100%;
+    width: 200px; */
+    top: 0px;
+    left: 0px;
+   bottom: 0px;
+   right: 0px;
+}
+#Resizable{
+    border: 1px solid black; 
+    height: 100%;
+    width: 200px;
+    background: rgba(255, 0, 0, 0.224);
+    /* position: absolute; */
+}
+#Draggable{
+    background: rgba(1, 1, 1, 1);
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    cursor: col-resize;
+    height: 20px;
+    width: 10px;
+}

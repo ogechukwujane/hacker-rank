@@ -4,7 +4,7 @@ import { footerLinks } from "../../constants";
 
 export const AppFooter = () => {
   return (
-    <div  className="max-w-auto mx-auto px-10">
+    <div  className="max-w-auto mx-auto px-5 sm:px-10">
       <div className="flex flex-col sm:flex-row  flex-wrap justify-between gap-3">
         {footerLinks.map(({ title, links }) => (
           <div key={title.name}>

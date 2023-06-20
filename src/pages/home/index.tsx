@@ -1,11 +1,12 @@
 import React from "react";
-import { Layout, MainIntro } from "../../components";
+import { Layout, MainBody, MainIntro } from "../../components";
 
 export const Home = () => {
   return (
     <Layout>
       <>
         <MainIntro />
+        <MainBody />
       </>
     </Layout>
   );
