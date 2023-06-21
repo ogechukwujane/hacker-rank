@@ -6,6 +6,13 @@ import image5 from "../assets/stripe_black.png";
 import image6 from "../assets/goldmansachs_black.png";
 import image7 from "../assets/adobe_black.png";
 import image8 from "../assets/linkedin_black.png";
+import tool1 from "../assets/tool1.png";
+import tool2 from "../assets/tool2.png";
+import tool3 from "../assets/tool3.png";
+import tool4 from "../assets/tool4.png";
+import tool5 from "../assets/tool5.png";
+import tool6 from "../assets/tool6.png";
+import tool7 from "../assets/tool7.png";
 
 export const headerLinks = ["Products", "Solutions", "Resources", "Pricing"];
 export const footerLinks = [
@@ -189,4 +196,13 @@ export const socialApps = [
   image6,
   image7,
   image8,
+];
+export const developmentTools = [
+  tool1,
+  tool2,
+  tool3,
+  tool4,
+  tool5,
+  tool6,
+  tool7,
 ];
