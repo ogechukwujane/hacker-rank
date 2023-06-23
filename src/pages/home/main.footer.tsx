@@ -1,7 +1,7 @@
 import React from "react";
-import intervieww_image from "../../../assets/interview1.png";
-import { carouselData, developmentTools, socialApps } from "../../../constants";
-import { CustomButton } from "../../customButton";
+import intervieww_image from "../../assets/interview1.png";
+import { carouselData, developmentTools, socialApps } from "../../constants";
+import { CustomButton } from "../../components/customButton";
 import { motion, Variants } from "framer-motion";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";

@@ -1,5 +1,5 @@
-import { socialApps } from "../../../constants";
-import { CustomButton } from "../../customButton";
+import { socialApps } from "../../constants";
+import { CustomButton } from "../../components/customButton";
 import { motion, Variants } from "framer-motion";
 
 const variant: Variants = {

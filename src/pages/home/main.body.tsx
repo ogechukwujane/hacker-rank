@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { CustomButton } from "../../customButton";
-import community_image from "../../../assets/community.jpg";
-import report_image from "../../../assets/report-2.jpg";
-import resume_image from "../../../assets/resume.jpg";
-import binarytree_image from "../../../assets/binarytree-1.png";
-import code_image from "../../../assets/code-1.png";
-import contenders_image from "../../../assets/contenders.png";
-import right_arrow from "../../../assets/right_arrow.svg";
+import { CustomButton } from "../../components/customButton";
+import community_image from "../../assets/community.jpg";
+import report_image from "../../assets/report-2.jpg";
+import resume_image from "../../assets/resume.jpg";
+import binarytree_image from "../../assets/binarytree-1.png";
+import code_image from "../../assets/code-1.png";
+import contenders_image from "../../assets/contenders.png";
+import right_arrow from "../../assets/right_arrow.svg";
 import "./style.css";
 import { motion, Variants } from "framer-motion";
 
