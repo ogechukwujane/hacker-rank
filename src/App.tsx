@@ -3,7 +3,7 @@ import { Home } from "./pages";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Home />
     </div>
   );

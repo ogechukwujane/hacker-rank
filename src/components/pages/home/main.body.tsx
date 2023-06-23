@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { CustomButton } from "../../customButton";
 import community_image from "../../../assets/community.jpg";
 import report_image from "../../../assets/report-2.jpg";
@@ -6,7 +6,25 @@ import resume_image from "../../../assets/resume.jpg";
 import binarytree_image from "../../../assets/binarytree-1.png";
 import code_image from "../../../assets/code-1.png";
 import contenders_image from "../../../assets/contenders.png";
+import right_arrow from "../../../assets/right_arrow.svg";
 import "./style.css";
+import { motion, Variants } from "framer-motion";
+
+const imageVariant: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 100,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+      duration: 0.5,
+      stiffness: 200,
+    },
+  },
+};
 
 export const MainBody = () => {
   const [initialPos, setInitialPos] = useState<number>();
@@ -22,7 +40,7 @@ export const MainBody = () => {
   const resize = (e: React.DragEvent<HTMLDivElement>) => {
     let resizable = document.getElementById("Resizable");
     if (resizable) {
-      if (resizable.style.width <= "60%") {
+      if (resizable.style.width > "60%") {
         resizable.style.width = `${
           (initialSize ?? 0) + (e.clientX - (initialPos ?? 0))
         }px`;
@@ -60,6 +78,7 @@ export const MainBody = () => {
             </p>
             <CustomButton
               title="Sign up and practice"
+              icon={right_arrow}
               buttonStyle="border-[1px] border-white font-medium text-[#f5f4f3] w-[100%] sm:w-[15em]"
             />
           </div>
@@ -120,9 +139,15 @@ export const MainBody = () => {
                   buttonStyle="text-black font-bold w-[10em] text-left px-0"
                 />
               </div>
-              <div className="lg:w-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                exit="hidden"
+                variants={imageVariant}
+                className="lg:w-[50%]"
+              >
                 <img src={binarytree_image} />
-              </div>
+              </motion.div>
             </div>
             <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="flex flex-col gap-8 lg:w-[50%] lg:pr-20">
@@ -139,9 +164,15 @@ export const MainBody = () => {
                   buttonStyle="text-black font-bold w-[10em] text-left px-0"
                 />
               </div>
-              <div className="lg:w-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                exit="hidden"
+                variants={imageVariant}
+                className="lg:w-[50%]"
+              >
                 <img src={code_image} />
-              </div>
+              </motion.div>
             </div>
             <div className="flex flex-col lg:flex-row gap-8 items-center">
               <div className="flex flex-col gap-8 lg:w-[50%] lg:pr-20">
@@ -158,9 +189,15 @@ export const MainBody = () => {
                   buttonStyle="text-black font-bold w-[10em] text-left px-0"
                 />
               </div>
-              <div className="lg:w-[50%]">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                exit="hidden"
+                variants={imageVariant}
+                className="lg:w-[50%]"
+              >
                 <img src={contenders_image} />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -176,9 +213,9 @@ export const MainBody = () => {
             real-world skills in a real-world environment.
           </p>
           <CustomButton
-              title="Learn more"
-              buttonStyle="bg-green-700 w-[100%] sm:w-[10em] text-lg font-medium text-white py-3 my-6"
-            />
+            title="Learn more"
+            buttonStyle="bg-green-700 w-[100%] sm:w-[10em] text-lg font-medium text-white py-3 my-6"
+          />
         </div>
       </div>
     </div>

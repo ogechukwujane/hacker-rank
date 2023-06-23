@@ -13,6 +13,12 @@ import tool4 from "../assets/tool4.png";
 import tool5 from "../assets/tool5.png";
 import tool6 from "../assets/tool6.png";
 import tool7 from "../assets/tool7.png";
+import ubs_black from "../assets/ubs_black.png";
+import vanguard_black from "../assets/vanguard_black.png";
+import vmware_black from "../assets/vmware_black.png";
+import wish_black from "../assets/wish_black.png";
+import doordash_black from "../assets/doordash_black.png";
+import booking_black from "../assets/booking_black.png";
 
 export const headerLinks = ["Products", "Solutions", "Resources", "Pricing"];
 export const footerLinks = [
@@ -205,4 +211,37 @@ export const developmentTools = [
   tool5,
   tool6,
   tool7,
+];
+
+export const carouselData = [
+  {
+    companyLogo: ubs_black,
+    review:
+      "We're discovering new ways of attracting candidates to the organisation. By using HackerRanks, we're actually improving the tech image of UBS",
+  },
+  {
+    companyLogo: vmware_black,
+    review:
+      "HackerRank has actually allowed us to look for diamonds in the rough that our old process didn't give us the time or resources to look for.",
+  },
+  {
+    companyLogo: booking_black,
+    review:
+      "We're promotiong our jobs to a much wider audience and allowing candidates to be selected for interviews purely based on the merit of their coding abilities.",
+  },
+  {
+    companyLogo: doordash_black,
+    review:
+      "We cut down hiring time by months, which was huge for use. We owe that to HackerRank.",
+  },
+  {
+    companyLogo: vanguard_black,
+    review:
+      "HackerRank is a critical piece of our candidate's experience and  hitting the right tone is just as important as identifying good candidates.",
+  },
+  {
+    companyLogo: wish_black,
+    review:
+      "HackerRank has been a huge help in making it easy to assess the skill of all the candidates we interview. Without it, the process of scaling our engineering team would have been very cumbersome.",
+  },
 ];
