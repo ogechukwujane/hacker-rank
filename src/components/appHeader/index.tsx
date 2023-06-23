@@ -27,8 +27,8 @@ export const AppHeader = () => {
     <>
       <div className="bg-blue-200 h-10 hidden xl:block">
         <div className="flex justify-end items-center gap-5 max-w-auto mx-auto px-10 h-full">
-          <p>home</p>
-          <p>home</p>
+          <p>Contact Us</p>
+          <p>Log In</p>
         </div>
       </div>
       <div
@@ -38,7 +38,6 @@ export const AppHeader = () => {
         }`}
       >
         <div className="flex justify-between items-center py-4 max-w-auto mx-auto px-5 sm:px-10">
-          {/* <div className="w-full py-5 flex justify-between items-center"> */}
           <div className="w-[130px] sm:w-[150px]">
             <img src={hacker_rank_logo} alt="hacker_rank_logo" width={"100%"} />
           </div>
@@ -67,7 +66,6 @@ export const AppHeader = () => {
               />
             </div>
           </div>
-          {/* </div> */}
         </div>
       </div>
     </>

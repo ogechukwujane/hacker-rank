@@ -7,6 +7,7 @@ import binarytree_image from "../../assets/binarytree-1.png";
 import code_image from "../../assets/code-1.png";
 import contenders_image from "../../assets/contenders.png";
 import right_arrow from "../../assets/right_arrow.svg";
+import line_pattern from "../../assets/line_pattern.svg";
 import "./style.css";
 import { motion, Variants } from "framer-motion";
 
@@ -19,11 +20,39 @@ const imageVariant: Variants = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.3,
+      delay: 0.2,
       duration: 0.5,
       stiffness: 200,
     },
   },
+};
+const circlePatternVariant: Variants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      duration: 0.5,
+      stiffness: 200,
+    },
+  },
+};
+
+const CirclePattern = ({ styles }: { styles?: string }) => {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      exit="hidden"
+      variants={circlePatternVariant}
+      className={`hidden lg:flex items-center gap-1 p-2 absolute bg-white ${styles}`}
+    >
+      <div className="circle" />
+      <div className="line" />
+    </motion.div>
+  );
 };
 
 export const MainBody = () => {
@@ -62,8 +91,8 @@ export const MainBody = () => {
         <p className="text-lg font-medium">Interview</p>
       </div>
       <div className="max-w-auto mx-auto px-5 sm:px-10 py-10">
-        <div className="bg-[#111621] flex flex-col lg:flex-row items-center gap-10 px-5 sm:px-10 py-7 lg:py-3 rounded-[10px]">
-          <div className="flex flex-col gap-7 w-full lg:w-[50%]">
+        <div className="bg-[#111621] flex flex-col lg:flex-row items-center gap-10 px-5 sm:px-10 py-7 lg:py-3 rounded-[10px] ">
+          <div className="flex flex-col gap-7 w-full lg:w-[50%] lg:border-l-[1px] lg:pl-10 lg:ml-5 border-slate-100">
             <p className="font-base text-xl text-[#9eaeb2]">
               :: Coding practice ::
             </p>
@@ -86,8 +115,8 @@ export const MainBody = () => {
             <img src={community_image} />
           </div>
         </div>
-        <div className="pb-20 mb-40">
-          <div className="flex flex-col gap-8 my-10">
+        <div className="pb-20 mb-10 lg:mb-0 lg:border-l-[1.4px] sm:px-10 lg:px-0 lg:pl-10 lg:ml-16 rounded-bl-[2em] border-slate-300 skill_screen relative">
+          <div className="flex flex-col gap-8 py-10">
             <p>:: Coding tests ::</p>
             <div className="flex flex-col gap-2">
               <h2 className="text-2xl sm:text-4xl lg:text-6xl font-light text-green-600 ">
@@ -100,6 +129,11 @@ export const MainBody = () => {
           </div>
           <div className="flex flex-col gap-[5em]">
             <div className="w-full  bg-red-700  image_wrap">
+              <CirclePattern styles="-left-[3.7em] top-6" />
+              <img
+                src={line_pattern}
+                className="line_pattern hidden lg:block absolute -left-[7.5em] top-10"
+              />
               <img
                 src={report_image}
                 width={"100%"}
@@ -112,7 +146,6 @@ export const MainBody = () => {
                 height={100}
                 className="resume_image"
               />
-              {/* </div> */}
               <div className="Block">
                 <div id="Resizable" />
                 <div
@@ -124,9 +157,10 @@ export const MainBody = () => {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-center ">
               <div className="flex flex-col gap-8 lg:w-[50%] lg:pr-20">
-                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight">
+                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight relative">
+                  <CirclePattern styles="-left-[1.65em] top-1" />
                   Leave the binary tree behind.
                 </h4>
                 <p className="font-base text-xl text-gray-500">
@@ -136,7 +170,8 @@ export const MainBody = () => {
                 </p>
                 <CustomButton
                   title="Start free trial"
-                  buttonStyle="text-black font-bold w-[10em] text-left px-0"
+                  icon={right_arrow}
+                  buttonStyle="text-black font-bold w-[15em] text-left px-0"
                 />
               </div>
               <motion.div
@@ -149,9 +184,10 @@ export const MainBody = () => {
                 <img src={binarytree_image} />
               </motion.div>
             </div>
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-center ">
               <div className="flex flex-col gap-8 lg:w-[50%] lg:pr-20">
-                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight">
+                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight relative">
+                  <CirclePattern styles="-left-[1.65em] top-1" />
                   Focus on what really matters: the code.
                 </h4>
                 <p className="font-base text-xl text-gray-500">
@@ -161,7 +197,8 @@ export const MainBody = () => {
                 </p>
                 <CustomButton
                   title="Request a demo"
-                  buttonStyle="text-black font-bold w-[10em] text-left px-0"
+                  icon={right_arrow}
+                  buttonStyle="text-black font-bold w-[15em] text-left px-0"
                 />
               </div>
               <motion.div
@@ -174,9 +211,10 @@ export const MainBody = () => {
                 <img src={code_image} />
               </motion.div>
             </div>
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-center ">
               <div className="flex flex-col gap-8 lg:w-[50%] lg:pr-20">
-                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight">
+                <h4 className="font-bold text-2xl lg:text-4xl text-black leading-tight relative">
+                  <CirclePattern styles="-left-[1.65em] top-1" />
                   Identify top contenders
                 </h4>
                 <p className="font-base text-xl text-gray-500">
@@ -186,6 +224,7 @@ export const MainBody = () => {
                 </p>
                 <CustomButton
                   title="Learn more"
+                  icon={right_arrow}
                   buttonStyle="text-black font-bold w-[10em] text-left px-0"
                 />
               </div>
@@ -200,6 +239,13 @@ export const MainBody = () => {
               </motion.div>
             </div>
           </div>
+        </div>
+        <div className="hidden lg:flex lg:px-[5.3em] -mt-[3px]">
+          <div className=" w-2/4 h-[8em] border-t-[1.4px] border-r-[1.4px] border-slate-300 rounded-tr-[2em] relative">
+            <CirclePattern styles="-right-[1.85em] top-20 rotate-90" />
+          </div>
+
+          <div className=" w-2/4" />
         </div>
         <div className="flex flex-col items-center gap-5">
           <p>:: Techinal interval ::</p>
